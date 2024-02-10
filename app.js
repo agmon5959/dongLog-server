@@ -6,6 +6,9 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // app에 router 미들웨어를 사용했음을 알린다.
 app.use("/contact", contactRoutes);
 
