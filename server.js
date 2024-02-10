@@ -8,7 +8,6 @@ const server = http.createServer((req, res) => {
     res.write("Hello World");
   } else {
     res.write("한글 테스트");
-    res.write("명절이니까~ 위장 커밋 한  번 할 ~~게");
   }
 
   res.end();
