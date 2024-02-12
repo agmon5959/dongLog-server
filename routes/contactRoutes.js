@@ -1,11 +1,11 @@
 const express = require("express");
+const { getAllContacts } = require("../controller/contactController");
+
 const router = express.Router();
 
 router
   .route("/")
-  .get((req, res) => {
-    res.send(`Select All Contacts`);
-  })
+  .get(getAllContacts)
   .post((req, res) => {
     console.log(req.body);
     const { name, age, weight } = req.body;
